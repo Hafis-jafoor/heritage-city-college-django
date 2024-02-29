@@ -66,8 +66,8 @@ def gallery(request):
 #         # Check if the email already exists
 #         if contacts.objects.filter(contact_email=contact_email).exists():
 #             messages.error(request, 'Email already exists.')
-#             return redirect('contact')
-    
+#             return render(request, 'contact.html', {'name': contact_name, 'email': contact_email, 'phone': contact_phone, 'subject': contact_subject, 'message': contact_message})
+
 #         # Create and save the contact object
 #         contact = contacts.objects.create(
 #             contact_name=contact_name,
@@ -80,6 +80,9 @@ def gallery(request):
 #         return redirect('contact')
 
 #     return render(request, 'contact.html')
+
+from django.core.mail import send_mail
+from django.conf import settings
 
 def contact(request):
     if request.method == 'POST':
@@ -102,7 +105,18 @@ def contact(request):
             contact_subject=contact_subject,
             contact_message=contact_message,
         )
-        messages.success(request, 'Your message has been sent successfully.')
+
+        # Send email
+        send_mail(
+            'Contact Form Submission',
+            f'Name: {contact_name}\nEmail: {contact_email}\nPhone: {contact_phone}\nSubject: {contact_subject}\nMessage: {contact_message}',
+            settings.EMAIL_HOST_USER,  # From email (configured in settings.py)
+            ['sticknobillshafis@gmail.com'],  # To email
+            fail_silently=False,
+        )
+
+        messages.success(request, 'Your message has been stored successfully .')
         return redirect('contact')
 
     return render(request, 'contact.html')
+
