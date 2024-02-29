@@ -1,2 +1,246 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title5 %}active{% endblock %}
+{% block content %}
+<!-- Page Header Start -->
+<div class="container-fluid text-white py-4">
+    <div class="container">
+        <h1 class="text-center"s style="color: #5CC6D2;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;">Admissions Open for 2024 Batch!</span></h1>
+        <marquee style="color: red;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;">Apply now to join our prestigious college and start your journey towards a successful career in healthcare.</marquee>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Form Start -->
+<div class="container-fluid mt-0" style="background: linear-gradient(#5CC6D2,white);">
+    <div class="container">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-6 px-5 py-4 wow fadeIn" data-wow-delay="0.1s" style="border: 30px solid white;">
+                <h3 class="text-center mb-3 text-white">Heritage City College</h3>
+                <img name="cimage" class="image_corosal img-fluid mx-auto d-block mb-3">
+                <p class="mb-3 text-dark text-center">Welcome to Heritage City College, where we nurture future leaders and innovators in healthcare. Explore our campus and programs.</p>
+            </div>
+            
+            <script>
+                var i = 0, img = [];
+                img[0] = "{% static 'img/about-1.jpg'%}";
+                img[1] = "{% static 'img/about-2.jpg'%}";
+                img[2] = "{% static 'img/about-3.jpg'%}";
+                img[3] = "{% static 'img/about-2.jpg'%}";
+                img[4] = "{% static 'img/about-1.jpg'%}";
+                img[5] = "{% static 'img/about-3.jpg'%}";
+                img[6] = "{% static 'img/about-1.jpg'%}";
+                img[7] = "{% static 'img/about-2.jpg'%}";
+                function funname() {
+                    document.cimage.src = img[i];
+                    if (i < img.length - 1) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(funname, 2000);
+                }
+                funname();
+            </script>
+            
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="border: 30px solid white;background: rgba(0, 0, 0, 0.507);">
+                <h2 class="text-center mb-4 text-white mt-3">Entry Form - 2024</h2>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="name" class="text-white">Your Full Name</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
+                            <small id="name-error" style="color: red; display: none;" class="mt-1">Name should contain only alphabets</small>
+                        </div>
+                        <script>
+                            document.getElementById('name').addEventListener('input', function() {
+                                var nameInput = this.value.trim();
+                                var regex = /^[a-zA-Z ]+$/;
+    
+                                if (!regex.test(nameInput)) {
+                                    document.getElementById('name-error').style.display = 'block';
+                                } else {
+                                    document.getElementById('name-error').style.display = 'none';
+                                }
+                            });
+                        </script>
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="phone" class="text-white">Your Mobile Number</label>
+                            <div class="d-grid gap-2">
+                                <input type="tel" class="form-control" id="phone" placeholder="Your Mobile Number"name="phone" required>
+                                <small id="phone-error" style="color: red; display: none;" class="mt-1">Please enter a valid phone number</small>
+                            </div>
+                        </div>
+                        <script>
+                            var input = document.querySelector("#phone");
+                            var iti = window.intlTelInput(input, {
+                                initialCountry: "in",
+                                separateDialCode: true,
+                                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                            });
+    
+                            input.addEventListener('input', function() {
+                                var isValid = iti.isValidNumber();
+                                if (!isValid) {
+                                    document.getElementById('phone-error').style.display = 'block';
+                                } else {
+                                    document.getElementById('phone-error').style.display = 'none';
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="email" class="text-white">Your Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            <small id="email-error" style="color: red; display: none;" class="mt-1">Invalid email format</small>
+                        </div>
+    
+                        <script>
+                            document.getElementById('email').addEventListener('input', function() {
+                                var emailInput = this.value.trim();
+                                var regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    
+                                if (!regex.test(emailInput)) {
+                                    document.getElementById('email-error').style.display = 'block';
+                                } else {
+                                    document.getElementById('email-error').style.display = 'none';
+                                }
+                            });
+                        </script>
+    
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="state" class="text-white">Select State</label>
+                            <select class="form-select" name="state" id="state" required>
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+    
+                        <script>
+                            var indianStates = [
+                                "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana",
+                                "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur",
+                                "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
+                                "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Andaman and Nicobar Islands",
+                                "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Lakshadweep", "Puducherry"
+                            ];
+    
+                            var stateSelect = document.getElementById("state");
+    
+                            indianStates.forEach(function(state) {
+                                var option = document.createElement("option");
+                                option.text = state;
+                                stateSelect.add(option);
+                            });
+                        </script>
+    
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="city" class="text-white">Your City</label>
+                            <input type="text" class="form-control" name="city" id="city" placeholder="Your City" required>
+                        </div>
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="pincode" class="text-white">Your Pincode</label>
+                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Your Pincode" required>
+                            <small id="pincode-error" style="color: red; display: none;" class="mt-1">Pincode should be 6 digits</small>
+                        </div>
+                        <script>
+                            document.getElementById('pincode').addEventListener('input', function() {
+                                var pincodeInput = this.value.trim();
+                                var regex = /^\d{6}$/;
+    
+                                if (!regex.test(pincodeInput)) {
+                                    document.getElementById('pincode-error').style.display = 'block';
+                                } else {
+                                    document.getElementById('pincode-error').style.display = 'none';
+                                }
+                            });
+                        </script>
+    
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-12 form-group ">
+                            <label for="department" class="text-white">Select Department</label>
+                            <select class="form-select" name="department" id="department" required>
+                                <option value="">Select Department</option>
+                                <option value="Physiotherapy">Bachelor of Occupational Therapy</option>
+                                <option value="Occupational Therapy">B.Sc Medical Imaging Technology
+                                </option>
+                                <option value="Speech Therapy">B.Sc Medical Laboratory Technology
+                                </option>
+                                <option value="Nursing">B.Sc Operation Theatre and Anaesthesia Technology</option>
+                                <option value="Medical Laboratory Technology">Bachelor of Physiotherapy
+                                </option>
+                                <option value="Medical Laboratory Technology">B.Sc Nursing
+                                    </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-12 form-group ">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agree" required>
+                                <label class="form-check-label text-white" for="agree">
+                                    I agree to the terms and conditions
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 mt-5">
+                        <div class="mb-3 d-grid gap-2">
+                            <input type="submit" class="btn btn jiggle-effect" name="submit" style="background-color: #5CC6D2;color: white;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Form End -->
+
+<!-- Three Grid Section Start -->
+<section class="container-fluid py-5 bg-light" id="terms">
+    <section class="container py-5">
+        <div class="row">
+            <!-- Content Block 1 -->
+            <div class="col-md-6 grid-item wow fadeIn" data-wow-delay="0.1s">
+                <div>
+                    <h3 class="mb-4 hover-effect">Admission Criteria</h3>
+                    <p class="mb-4 hover-effect">Two-year pre-university examination (10+2) or equivalent, as recognized by Rajiv Gandhi University of Health Sciences, with physics, chemistry, and biology as the principal subjects of study.
+                    </p>
+                    <p><span style="color: #5CC6D2;font-weight: bolder;"> Or</span></p>
+                    <p class="mb-4 hover-effect">The vocational higher secondary education courses conducted by Vocational Higher Secondary Education, Govt. of Kerala, with five subjects including physics, chemistry, biology, and English, in addition to the vocational subjects conducted, are considered equivalent to plus two examinations of the GOK-Pre University Course.
+                    </p>
+                    <p><span style="color: #5CC6D2;font-weight: bolder;"> Or</span></p>
+                    <p class="mb-4 hover-effect">Lateral entry to the second year of allied health science courses is available for candidates who have passed the diploma program from the Govt. Boards and are recognized by RGUHS.
+                    </p>
+                </div>
+            </div>
+            <!-- Content Block 2 -->
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                <div >
+                    <div class="col-md-12 grid-item">
+                        <h3 class="mb-4 hover-effect">The Selection of Students will be Based on Merit, Provided that:
+                        </h3>
+                        <p class="mb-4 hover-effect">In case of admission on the basis of a qualifying examination, a candidate for admission must have passed individually in the subjects of physics, chemistry, biology, and English and must have obtained not less than 45% marks taken together in physics, chemistry, and biology in the qualifying examination.
+                        </p>
+                        <p class="mb-4 hover-effect">In respect of candidates belonging to Scheduled Castes, Scheduled Tribes, or Category I, the marks obtained in Physics, Chemistry, and Biology together in the qualifying examination are not less than 40%.
+                        </p>
+                    </div>
+                </div>
+                <!-- Content Block 3 -->
+                <div class="wow fadeIn" data-wow-delay="0.1s">
+                    <div class="col-md-12 grid-item">
+                        <h3 class="mb-4 hover-effect">Minimum Age</h3>
+                        <p class="mb-4 hover-effect">A candidate seeking admission for this course should have completed 17 years of age as of December 31st of the year of admission.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- Three Grid Section End -->
+{% endblock %}
+

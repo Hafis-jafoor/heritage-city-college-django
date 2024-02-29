@@ -1,4 +1,147 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title8 %}active{% endblock %}
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid text-white py-4">
+    <div class="container">
+        <h1 class="text-center" style="color: #5CC6D2;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;">Contact</h1>
+    </div>
+</div>
+<!-- Page Header End -->
 
 
+<!-- Contact Start -->
+<div class="container-fluid py-5" style="margin-top: -60px;">
+    <div class="container py-5">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="display-6">Feel Free To Contact Us</h1>
+            <!-- <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</p> -->
+        </div>
+        <div class="row contact-info position-relative g-0 mb-5 mt-5">
+            <div class="col-lg-6">
+                <a href="tel:+0123456789" class="d-flex justify-content-lg-center p-4" style="background-color: black;">
+                    <div class="icon-box-light flex-shrink-0">
+                        <i class="bi bi-phone text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-white">Call Us</h5>
+                        <h2 class="text-white mb-0">+012 345 67890</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a href="mailto:info@example.com" class="d-flex justify-content-lg-center p-4" style="background-color: black;">
+                    <div class="icon-box-light flex-shrink-0">
+                        <i class="bi bi-envelope text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-white">Mail Us</h5>
+                        <h2 class="text-white mb-0">info@example.com</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <form action="{% url 'contact' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required name="name">
+                                <label for="name">Your Name</label>
+                                <small id="name-error" style="color: red; display: none;" class="mt-1">Name should contain only alphabets</small>
+                            </div>
+                        </div>
+                        <script>
+                            document.getElementById('name').addEventListener('input', function() {
+                                var nameInput = this.value.trim();
+                                var regex = /^[a-zA-Z ]+$/;
+                        
+                                if (!regex.test(nameInput)) {
+                                    document.getElementById('name-error').style.display = 'block';
+                                } else {
+                                    document.getElementById('name-error').style.display = 'none';
+                                }
+                            });
+                        </script>
+                        
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required name="email">
+                                <label for="email">Your Email</label>
+                                <small id="email-error" style="color: red; display: none;" class="mt-1">Please enter a valid email address</small>
+                            </div>
+                        </div>
+                        <script>
+                            document.getElementById('email').addEventListener('input', function() {
+                                var emailInput = this.value.trim();
+                                var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        
+                                if (!regex.test(emailInput)) {
+                                    document.getElementById('email-error').style.display = 'block';
+                                } else {
+                                    document.getElementById('email-error').style.display = 'none';
+                                }
+                            });
+                        </script>
+                        
+                        <!-- <div class="col-12"> -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number" required name="phone">
+                                <label for="phone">Your Phone Number</label>
+                                <small id="phone-error" style="color: red; display: none;" class="mt-1">Please enter a valid 10-digit phone number</small>
+                            </div>
+                        </div>
+                        <script>
+                            document.getElementById('phone').addEventListener('input', function() {
+                                var phoneInput = this.value.trim();
+                                var regex = /^[0-9]{10}$/;
+                        
+                                if (!regex.test(phoneInput)) {
+                                    document.getElementById('phone-error').style.display = 'block';
+                                } else {
+                                    document.getElementById('phone-error').style.display = 'none';
+                                }
+                            });
+                        </script>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required name="subject">
+                                <label for="subject">Subject</label>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px" required name="message"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <input class="btn btn-primary py-3 px-5 jiggle-effect" type="submit" value="Send Message">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <img class="w-100 h-100"
+                src=""
+                style="min-height: 300px; border:0;" allowfullscreen="" >
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+{% endblock %}
