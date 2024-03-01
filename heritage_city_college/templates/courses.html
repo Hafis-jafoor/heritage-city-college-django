@@ -1,2 +1,176 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title3 %}active{% endblock %}
+
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid text-white py-4">
+    <div class="container">
+        <h1 class="text-center" style="color: #5CC6D2;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;">Courses</h1>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Service Start -->
+<div class="container-fluid container-service py-5">
+    <div class="container pt-5">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+            <h1 class="display-6 mb-3">Departments</h1>
+            <p class="mb-5">Heritage City College endeavors to nurture students' talents and dedication with advanced technology and materials, enabling them to truly succeed in their dream fields. In any profession, hard work and perseverance are the keys to success.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Department 1: Bachelor of Occupational Therapy -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="icon-box-primary mb-4">
+                        <i class="bi bi-heart-pulse text-dark"></i>
+                    </div>
+                    <h5 class="mb-3">Bachelor of Occupational Therapy</h5>
+                    <p class="mb-4">Occupational Therapy (OT) is concerned with the treatment and rehabilitation of individuals who are,  mentally, emotionally, and physically challenged.</p>
+                    <a class="btn btn-light px-3 jiggle-effect" href="{% url 'departments' %}#Occupational_Therapy">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
+                </div>
+            </div>
+            <!-- Department 2: BSc Medical Imaging Technology -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="icon-box-primary mb-4">
+                        <i class="bi bi-lungs text-dark"></i>
+                    </div>
+                    <h5 class="mb-3">BSc Medical Imaging Technology</h5>
+                    <p class="mb-4">Medical Imaging Technology (MIT) involves the exploration of various techniques for capturing images (X-rays, ultrasounds, magnetic  ...</p>
+                    <a class="btn btn-light px-3 jiggle-effect" href="{% url 'departments' %}#Medical_Imaging">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
+                </div>
+            </div>
+            <!-- Department 3: BSc Medical Laboratory Technology -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="icon-box-primary mb-4">
+                        <i class="bi bi-virus text-dark"></i>
+                    </div>
+                    <h5 class="mb-3">BSc Medical Laboratory Technology</h5>
+                    <p class="mb-4">Medical Laboratory Technology (MLT) is a healthcare specialty dedicated to diagnosing, treating, and preventing diseases with clinical laboratory tests.</p>
+                    <a class="btn btn-light px-3 jiggle-effect" href="{% url 'departments' %}#Medical_Laboratory">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
+                </div>
+            </div>
+            <!-- Department 4: B.Sc. Anaesthesia and Operation Theatre Technology -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="icon-box-primary mb-4">
+                        <i class="bi bi-capsule text-dark"></i>
+                    </div>
+                    <h5 class="mb-3">B.Sc. Anaesthesia and Operation Theatre Technology</h5>
+                    <p class="mb-4">The 4-year B.Sc in Operation Theatre and Anaesthesia Technology (OT & AT) provides students with comprehensive ...</p>
+                    <a class="btn btn-light px-3 jiggle-effect" href="{% url 'departments' %}#Anaesthesia">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-3">
+            <!-- Department 5: Bachelor of Physiotherapy -->
+            <div class="col-lg-1 col-md-6 wow fadeInUp" data-wow-delay="0.1s"></div>
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="mb-1 text-center"><b>Heritage City College of Physiotherapy</b></p>
+                <div class="service-item">
+                    <div class="icon-box-primary mb-4">
+                        <i class="bi bi-droplet-half text-dark"></i>
+                    </div>
+                    <h5 class="mb-3">Bachelor of Physiotherapy</h5>
+                    <p class="mb-4">The Bachelor of Physiotherapy (BPT) is a popular 4-year undergraduate degree followed by a 6-month internship. BPT focuses on treating and curing disorders through the use of physical intervention at the sites of the ailments or injuries. </p>
+                    <a class="btn btn-light px-3 jiggle-effect" href="{% url 'departments' %}#Physiotherapy">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
+                </div>
+            </div>
+            <!-- Department 6: BSc Nursing -->
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <p class="mb-1 text-center"><b>Heritage City College of Nursing</b></p>
+                <div class="service-item">
+                    <div class="icon-box-primary mb-4">
+                        <i class="bi bi-prescription2 text-dark"></i>
+                    </div>
+                    <h5 class="mb-3">BSc Nursing</h5>
+                    <p class="mb-4">B.Sc Nursing is a 4-year-long undergraduate degree that stands out as a widely chosen undergraduate professional program, encompassing the promotion of health, illness prevention, and the care of individuals who are mentally and physically ill or disabled. </p>
+                    <a class="btn btn-light px-3 jiggle-effect" href="{% url 'departments' %}#Nursing">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial py-5" style="border-radius: 20px;">
+    <div class="container pt-5">
+        <div class="row gy-5 gx-0">
+            <div class="col-lg-6 pe-lg-5 wow fadeIn" data-wow-delay="0.3s">
+                <h1 class="display-6 text-white mb-4">What Alumni's Say About Our Services!</h1>
+                <p class="text-white mb-5">Listen to the success stories of our alumni as they share their transformative journeys.
+                </p>
+                <a href="{% url 'testimonials' %}" class="btn btn py-3 px-5 jiggle-effect" style="background-color: #5cc6d2ab;color: white;">More Testimonials</a>
+            </div>
+            <div class="col-lg-6 mb-n5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="bg-white p-5">
+                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.1s">
+                        <div class="testimonial-item">
+                            <div class="icon-box-primary mb-4">
+                                <i class="bi bi-chat-left-quote text-dark"></i>
+                            </div>
+                            <p class="fs-5 mb-4">I completed my nursing degree at Heritage City College. It was my dream to become a nurse who could help others selflessly with care and love. And Heritage City College made it happen, paving the way to my dream. The expertized pedagogy, advanced technologies, facilities, calm study environments, and every academic program helped me achieve my goal. Thank you so much.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0" src="{%static 'img/testimonial-1.jpg' %}" alt="">
+                                <div class="ps-3">
+                                    <h5 class="mb-1">Client Name</h5>
+                                    <span class="text-primary">Nurse</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="icon-box-primary mb-4">
+                                <i class="bi bi-chat-left-quote text-dark"></i>
+                            </div>
+                            <p class="fs-5 mb-4">I have completed my bachelor's degree in occupational therapy and am currently residing abroad. Heritage City College made my dream easier because they provided language training along with my graduation studies. This saved me from spending another year learning a new language and going abroad. Additionally, the 100% guaranteed placement assistance helped me find the exact job I wanted in a foreign country. As an alumna, I am very proud of my college.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0" src="{%static 'img/testimonial-2.jpg' %}" alt="">
+                                <div class="ps-3">
+                                    <h5 class="mb-1">Client Name</h5>
+                                    <span class="text-primary">Occupational Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="icon-box-primary mb-4">
+                                <i class="bi bi-chat-left-quote text-dark"></i>
+                            </div>
+                            <p class="fs-5 mb-4">I believe Heritage City College offers the best academics. Effective teaching methods are an additional advantage for every student's career. Heritage City College strives to excel in every aspect with its advanced facilities and technologies. Most students from our college achieved great academic results not only because of their dedication but also because of our teachers' efforts. I'm grateful to all my teachers; you are the backbone of our success.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0" src="{%static 'img/testimonial-1.jpg' %}" alt="">
+                                <div class="ps-3">
+                                    <h5 class="mb-1">Client Name</h5>
+                                    <span class="text-primary">Senior Consultant Physiotherapist                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="icon-box-primary mb-4">
+                                <i class="bi bi-chat-left-quote text-dark"></i>
+                            </div>
+                            <p class="fs-5 mb-4">I’m an alumni of B.Sc. Medical Laboratory Technology and am presently working as a senior lab technician at Apollo Hospital. After studying, everyone wishes to get a better job. For me, I was lucky. I got placed at Apollo before completing my graduation. It helped me so much to have a less worried career in this fastest-moving world. Most of my friends also got placed through the placement cell. I am 100% satisfied with my career and my college.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0" src="{%static 'img/testimonial-1.jpg' %}" alt="">
+                                <div class="ps-3">
+                                    <h5 class="mb-1">Client Name</h5>
+                                    <span class="text-primary">Senior Lab Technician
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+{% endblock %}

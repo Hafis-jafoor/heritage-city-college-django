@@ -1,2 +1,127 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title4 %}active{% endblock %}
+
+{% block content %}
+
+<!-- Bachelor of Physiotherapy Section Start -->
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <h2 class="h1 mb-4 hover-effect">Bachelor of Physiotherapy</h2>
+                <p class="mb-4 hover-effect">The on-campus physiotherapy clinic, known for its excellent facilitation, serves as the flagship of the physiotherapy department. Equipped with modern tools, it provides students with essential hands-on clinical experience crucial for their future as physiotherapists. This enhances their skills and deepens their understanding of each piece of equipment's features and usage, ultimately benefiting the patients they will serve in the future.
+                </p>
+            </div>
+            <div class="col-md-6 position-relative mt-1" style="animation: slideInFromRight 1s forwards;">
+                <div class="row g-0">
+                    <div class="col-6 about_image">
+                        <img class="w-100 h-100" src="{% static 'img/about-1.jpg' %}">
+                    </div>
+                    <div class="col-6 about_image">
+                        <img class="w-100 h-100" src="{% static 'img/about-2.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Bachelor of Physiotherapy Section End -->
+
+<!-- Note-like Section Start -->
+<section class="container-fluid py-5">
+    <div class="container p-5 note-section" style="background: linear-gradient(#5CC6D2, white); border-radius: 30px;">
+        <div class="row align-items-center slide1">
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <img src="{% static 'img/team-1.jpg' %}" alt="Image" class="img-fluid " style="max-width: 100%;border-radius: 20px;">
+            </div>
+            <div class="col-md-8 text-dark">
+                <b><h3 class="text-dark">Opportunities
+                </h3></b>
+                <p class="mt-4">The need for physiotherapists is experiencing rapid growth, given their integral role in both diagnosis and treatment. Job prospects in the field encompass a range of roles including,
+                </p>
+                <ul class="core-values mb-4 hover-effect">
+                    <li>Independent Consultants</li>
+                    <li>Administrators</li>
+                    <li>Specialists</li>
+                    <li>Researchers</li>
+                    <li>Educators</li>
+                </ul>
+                <!-- <p>They can work independently as consultants, specialists, administrators, educators and researchers in an extensive range of professional settings.</p> -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Note-like Section End -->
+
+
+<!-- gallery -->
+<section class="container py-5">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 1</h4>
+                </div>
+                <img src="{% static 'img/team-1.jpg' %}" class="img-fluid rounded" alt="Gallery Image 1">
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 2</h4>
+                </div>
+                <img src="{% static 'img/team-2.jpg' %}" class="img-fluid rounded" alt="Gallery Image 2">
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 3</h4>
+                </div>
+                <img src="{% static 'img/team-3.jpg' %}" class="img-fluid rounded" alt="Gallery Image 3">
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 4</h4>
+                </div>
+                <img src="{% static 'img/team-4.jpg' %}" class="img-fluid rounded" alt="Gallery Image 4">
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 4</h4>
+                </div>
+                <img src="{% static 'img/team-3.jpg' %}" class="img-fluid rounded" alt="Gallery Image 4">
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 4</h4>
+                </div>
+                <img src="{% static 'img/team-2.jpg' %}" class="img-fluid rounded" alt="Gallery Image 4">
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 4</h4>
+                </div>
+                <img src="{% static 'img/team-1.jpg' %}" class="img-fluid rounded" alt="Gallery Image 4">
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="position-relative image-container">
+                <div class="image-overlay">
+                    <h4>Image 4</h4>
+                </div>
+                <img src="{% static 'img/team-4.jpg' %}" class="img-fluid rounded" alt="Gallery Image 4">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

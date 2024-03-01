@@ -1,2 +1,231 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title7 %}active{% endblock %}
+
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid text-white py-4">
+    <div class="container">
+        <h1 class="text-center" style="color: #5CC6D2;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;">Gallery</h1>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Button Section Start -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col text-center">
+            <button class="btn btn-lg ms-3 mb-3" onclick="showContent('content1')" style="background-color: #5CC6D2;color: white; border-radius: 10px;">Button 1</button>
+            <button class="btn btn-lg ms-3 mb-3" onclick="showContent('content2')" style="background-color: #5CC6D2;color: white; border-radius: 10px;">Button 2</button>
+            <button class="btn btn-lg ms-3 mb-3" onclick="showContent('content3')" style="background-color: #5CC6D2;color: white; border-radius: 10px;">Button 3</button>
+            <button class="btn btn-lg ms-3 mb-3" onclick="showContent('content4')" style="background-color: #5CC6D2;color: white; border-radius: 10px;">Button 4</button>
+            <button class="btn btn-lg ms-3 mb-3" onclick="showContent('content5')" style="background-color: #5CC6D2;color: white; border-radius: 10px;">Button 5</button>
+            <button class="btn btn-lg ms-3 mb-3" onclick="showContent('content6')" style="background-color: #5CC6D2;color: white; border-radius: 10px;">Button 6</button>
+        </div>
+    </div>
+</div>
+<!-- Button Section End -->
+
+<!-- Content Section Start -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col" id="content1" style="display: none;">
+            <!-- Content for Button 1 -->
+                <div class="row p-3">
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card card1">
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 1">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card card1">
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 2">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card card1">
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 3">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card card1">
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card card1">
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 5">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card card1">
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 6">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card card1" >
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 7">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                        <div class="card  card1">
+                            <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="content2" style="display: none;">
+            <!-- Content for Button 2 -->
+            <div class="row p-3">
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 5">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 6">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 7">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for content3 to content6 -->
+
+        <div class="col" id="content3" style="display: none;">
+            <!-- Content for Button 3 -->
+            <div class="row p-3 ">
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 5">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 6">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1" >
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 7">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card  card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 8">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" id="content4" style="display: none;">
+            <!-- Content for Button 4 -->
+            <div class="row p-3">
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 5">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 6">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 7">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 8">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 8">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" id="content5" style="display: none;">
+            <!-- Content for Button 5 -->
+            <div class="row p-3">
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 5">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 6">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 7">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col" id="content6" style="display: none;">
+            <!-- Content for Button 6 -->
+            <div class="row p-3">
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 5">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 6">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 7">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 8">
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch mb-3">
+                    <div class="card card1">
+                        <img src="{% static 'img/team-2.jpg' %}" class="card-img-top" alt="Image 8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content Section End -->
+
+<script>
+    function showContent(contentId) {
+        // Hide all content sections
+        document.querySelectorAll('.col[id^="content"]').forEach(function (el) {
+            el.style.display = 'none';
+        });
+
+        // Show the selected content section
+        document.getElementById(contentId).style.display = 'block';
+    }
+    // Show content for the first button when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        showContent('content1');
+    });
+</script>
+{% endblock %}

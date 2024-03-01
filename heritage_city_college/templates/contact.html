@@ -52,7 +52,7 @@
                         </div>
                     {% endfor %}
                 {% endif %}
-                <form action="{% url 'contact' %}" method="post">
+                <form id="contactForm" action="{% url 'contact' %}" method="post">
                     {% csrf_token %}
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -62,19 +62,6 @@
                                 <small id="name-error" style="color: red; display: none;" class="mt-1">Name should contain only alphabets</small>
                             </div>
                         </div>
-                        <script>
-                            document.getElementById('name').addEventListener('input', function() {
-                                var nameInput = this.value.trim();
-                                var regex = /^[a-zA-Z ]+$/;
-                        
-                                if (!regex.test(nameInput)) {
-                                    document.getElementById('name-error').style.display = 'block';
-                                } else {
-                                    document.getElementById('name-error').style.display = 'none';
-                                }
-                            });
-                        </script>
-                        
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input type="email" class="form-control" id="email" placeholder="Your Email" required name="email">
@@ -82,20 +69,6 @@
                                 <small id="email-error" style="color: red; display: none;" class="mt-1">Please enter a valid email address</small>
                             </div>
                         </div>
-                        <script>
-                            document.getElementById('email').addEventListener('input', function() {
-                                var emailInput = this.value.trim();
-                                var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        
-                                if (!regex.test(emailInput)) {
-                                    document.getElementById('email-error').style.display = 'block';
-                                } else {
-                                    document.getElementById('email-error').style.display = 'none';
-                                }
-                            });
-                        </script>
-                        
-                        <!-- <div class="col-12"> -->
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number" required name="phone">
@@ -103,25 +76,12 @@
                                 <small id="phone-error" style="color: red; display: none;" class="mt-1">Please enter a valid 10-digit phone number</small>
                             </div>
                         </div>
-                        <script>
-                            document.getElementById('phone').addEventListener('input', function() {
-                                var phoneInput = this.value.trim();
-                                var regex = /^[0-9]{10}$/;
-                        
-                                if (!regex.test(phoneInput)) {
-                                    document.getElementById('phone-error').style.display = 'block';
-                                } else {
-                                    document.getElementById('phone-error').style.display = 'none';
-                                }
-                            });
-                        </script>
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input type="text" class="form-control" id="subject" placeholder="Subject" required name="subject">
                                 <label for="subject">Subject</label>
                             </div>
                         </div>
-                        <!-- </div> -->
                         <div class="col-12">
                             <div class="form-floating">
                                 <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px" required name="message"></textarea>
@@ -133,6 +93,47 @@
                         </div>
                     </div>
                 </form>
+                
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                        var nameInput = document.getElementById('name').value.trim();
+                        var emailInput = document.getElementById('email').value.trim();
+                        var phoneInput = document.getElementById('phone').value.trim();
+                        var subjectInput = document.getElementById('subject').value.trim();
+                        var messageInput = document.getElementById('message').value.trim();
+                
+                        var nameRegex = /^[a-zA-Z ]+$/;
+                        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        var phoneRegex = /^[0-9]{10}$/;
+                
+                        var valid = true;
+                
+                        if (!nameRegex.test(nameInput)) {
+                            document.getElementById('name-error').style.display = 'block';
+                            valid = false;
+                        } else {
+                            document.getElementById('name-error').style.display = 'none';
+                        }
+                
+                        if (!emailRegex.test(emailInput)) {
+                            document.getElementById('email-error').style.display = 'block';
+                            valid = false;
+                        } else {
+                            document.getElementById('email-error').style.display = 'none';
+                        }
+                
+                        if (!phoneRegex.test(phoneInput)) {
+                            document.getElementById('phone-error').style.display = 'block';
+                            valid = false;
+                        } else {
+                            document.getElementById('phone-error').style.display = 'none';
+                        }
+                
+                        if (!valid) {
+                            event.preventDefault(); // Prevent form submission
+                        }
+                    });
+                </script>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <img class="w-100 h-100"
@@ -143,5 +144,4 @@
     </div>
 </div>
 <!-- Contact End -->
-
 {% endblock %}
