@@ -177,13 +177,13 @@
 
     <!-- Brand Start -->
     <div class="container-fluid pt-4 pb-5 d-none d-lg-flex"  style="background: linear-gradient(#5CC6D2,black) ;">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 mt-0 ms-5">
+        <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5 mt-0 ms-5">
             <img src="{% static 'img/heritage logo HR.png' %}" alt="Heritage Website Logo" height="210" width="220">
             {% comment %} <img src="img/heritage logo HR.png" alt="Heritage Website Logo" height="210" width="220"> {% endcomment %}
         </a>
         <div class="container pb-2 mt-5 ms-0">
             <div class=" d-flex align-items-center justify-content-between">
-                <a href="index.html" class="h1 mb-0" style="font-family: 'Times New Roman', Times, serif;font-size: 100px;color: white;">Heritage City College</a>
+                <a href="{% url 'home' %}" class="h1 mb-0" style="font-family: 'Times New Roman', Times, serif;font-size: 100px;color: white;">Heritage City College</a>
             </div>
         </div>
     </div>
@@ -193,7 +193,7 @@
     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
-                <a href="index.html" class="navbar-brand d-lg-none">
+                <a href="{% url 'home' %}" class="navbar-brand d-lg-none">
                     <img src="{% static 'img/heritage logo HR.png' %}" alt="Heritage Website Logo" height="150" width="180">
                     {% comment %} <img src="img/heritage logo HR.png" alt="Heritage Website Logo" height="150" width="180"> {% endcomment %}
                     <!-- <img src="img/heritage logo HR.png" alt="Heritage Website Logo" height="80" width="100"> -->
@@ -239,7 +239,7 @@
         <div class="container">
             <div class="row g-5 py-5">
                 <div class="col-lg-6 pe-lg-5">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="{% url 'home' %}" class="navbar-brand">
                         <h1 class="h1 text-dark mb-0">Heritage City College</h1>
                     </a>
                     <!-- <p class="fs-5 mb-4"><span style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</span></p> -->
@@ -272,14 +272,14 @@
                             <a class="btn btn-link" href="{% url 'pysiotherapy' %}"><span style="color: white;">Physiotherapy Therapy Clinic</span></a>
                             <a class="btn btn-link" href="{% url 'testimonials' %}"><span style="color: white;">Testimonials</span></a>
                         </div>
-                        <div class="col-sm-12">
+                        <!-- <div class="col-sm-12">
                             <h4 class="text-dark mb-4">Newsletter</h4>
                             <div class="w-100">
                                 <div class="input-group">
                                     <input type="text" class="form-control border-0 py-3 px-4" style="background: white;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -293,10 +293,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; <a href="#">Heritage City College</a>. All Rights Reserved.</p>
+                    <p class="mb-0">&copy; <a href="{% url 'home' %}">Heritage City College</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a href="">Heritage City College</a></p>
+                    <p class="mb-0">Designed by <a href="{% url 'home' %}">Heritage City College</a></p>
                 </div>
             </div>
         </div>
