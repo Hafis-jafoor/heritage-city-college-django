@@ -107,14 +107,14 @@ def contact(request):
         )
 
         # Send email
-        # send_mail(
-        #     'Contact Form Submission',
-        #     f'Name: {contact_name}\nEmail: {contact_email}\nPhone: {contact_phone}\nSubject: {contact_subject}\nMessage: {contact_message}',
-        #     contact_email,  # From email (user's email address)
-        #     # settings.EMAIL_HOST_USER,  # From email (configured in settings.py)
-        #     ['sticknobillshafis@gmail.com'],  # To email
-        #     fail_silently=False,
-        # )
+        send_mail(
+            'Contact Form Submission',
+            f'Name: {contact_name}\nEmail: {contact_email}\nPhone: {contact_phone}\nSubject: {contact_subject}\nMessage: {contact_message}',
+            contact_email,  # From email (user's email address)
+            # settings.EMAIL_HOST_USER,  # From email (configured in settings.py)
+            ['sticknobillshafis@gmail.com'],  # To email
+            fail_silently=False,
+        )
 
         messages.success(request, 'Your message has been stored successfully .')
         return redirect('contact')
@@ -148,14 +148,14 @@ def admission(request):
         )
 
         # Send email
-        # send_mail(
-        #     'admission Form Submission',
-        #     f'Name: {admission_name}\nEmail: {admission_email}\nPhone: {admission_number}\nState: {admission_state}\nCity: {admission_city}\Pincode: {admission_pincode}\Department: {admission_department}',
-        #     admission_email,
-        #     # settings.EMAIL_HOST_USER,  # From email (configured in settings.py)
-        #     ['sticknobillshafis@gmail.com'],  # To email
-        #     fail_silently=False,
-        # )
+        send_mail(
+            'admission Form Submission',
+            f'Name: {admission_name}\nEmail: {admission_email}\nPhone: {admission_number}\nState: {admission_state}\nCity: {admission_city}\Pincode: {admission_pincode}\Department: {admission_department}',
+            admission_email,
+            # settings.EMAIL_HOST_USER,  # From email (configured in settings.py)
+            ['sticknobillshafis@gmail.com'],  # To email
+            fail_silently=False,
+        )
 
         messages.success(request, 'Your message has been send successfully .')
         return redirect('admission')
