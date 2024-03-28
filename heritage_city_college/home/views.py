@@ -108,7 +108,7 @@ def contact(request):
 
         # Send email
         send_mail(
-            'Contact Form Submission',
+            'Contact Form Submission of Heritage',
             f'Name: {contact_name}\nEmail: {contact_email}\nPhone: {contact_phone}\nSubject: {contact_subject}\nMessage: {contact_message}',
             contact_email,  # From email (user's email address)
             # settings.EMAIL_HOST_USER,  # From email (configured in settings.py)
@@ -149,7 +149,7 @@ def admission(request):
 
         # Send email
         send_mail(
-            'admission Form Submission',
+            'admission Form Submission of Heritage',
             f'Name: {admission_name}\nEmail: {admission_email}\nPhone: {admission_number}\nState: {admission_state}\nCity: {admission_city}\Pincode: {admission_pincode}\Department: {admission_department}',
             admission_email,
             # settings.EMAIL_HOST_USER,  # From email (configured in settings.py)
